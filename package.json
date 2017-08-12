@@ -1,0 +1,35 @@
+{
+  "name": "isotropy-lib-db",
+  "version": "1.0.0",
+  "description": "DB backend for Isotropy Compiler.",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "mocha dist/test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/isotropy/isotropy-lib-db.git"
+  },
+  "author": "Arivanandan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/isotropy/isotropy-lib-db/issues"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "babelify": "^7.3.0",
+    "mocha": "^3.4.2",
+    "path": "^0.12.7",
+    "should": "^11.2.1",
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.22.1",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-latest": "^6.22.0",
+    "babel-preset-modern-browsers": "^8.0.0",
+    "babel-preset-stage-2": "^6.22.0"
+  }
+}
