@@ -1,7 +1,7 @@
 {
   "name": "isotropy-lib-db",
   "version": "1.0.0",
-  "description": "DB backend for Isotropy Compiler.",
+  "description": "Postgres Library for the Isotropy Project",
   "main": "index.js",
   "directories": {
     "test": "tests"
@@ -19,11 +19,11 @@
     "url": "https://github.com/isotropy/isotropy-lib-db/issues"
   },
   "dependencies": {
+    "mongodb": "^2.2.31"
   },
   "devDependencies": {
     "babelify": "^7.3.0",
     "mocha": "^3.4.2",
-    "path": "^0.12.7",
     "should": "^11.2.1",
     "babel-cli": "^6.24.1",
     "babel-core": "^6.22.1",

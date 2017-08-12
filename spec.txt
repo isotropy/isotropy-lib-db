@@ -1,0 +1,20 @@
+# isotropy-lib-mongo
+Mongo Library for the Isotropy Project
+
+1. read(collection, filters)
+  returns collection
+
+2. insert(collection, data)
+  returns nothing
+
+3. delete(collection, filters)
+  returns nothing
+
+4. update(collection, data, filters)
+  returns nothing
+
+5. sort(collection, order)
+  returns collection
+
+6. count(collection)
+  returns integer
