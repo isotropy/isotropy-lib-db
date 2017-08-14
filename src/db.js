@@ -1,8 +1,9 @@
 const MongoClient = require("mongodb").MongoClient;
 
-const url = "mongodb://localhost:27017/mongodriver";
+const connectionString = "mongodb://localhost:27017/mongodriver";
 
-const connect = async () => await MongoClient.connect(url);
+const connect = async connectionString =>
+  await MongoClient.connect(connectionString);
 
 const cursorReader = async cursor => {
   const out = [];
@@ -11,18 +12,23 @@ const cursorReader = async cursor => {
   return out;
 };
 
-async function count(collection) {
-  const db = await connect();
+export async function count(connectionString, collection) {
+  const db = await connect(connectionString);
   return await db.collection(collection).count();
 }
 
-async function insert(collection, data) {
-  const db = await connect();
+export async function insert(connectionString, collection, data) {
+  const db = await connect(connectionString);
   db.collection(collection).insertMany(data);
 }
 
-async function read(collection, filters = null, sortFilters = null) {
-  const db = await connect();
+export async function read(
+  connectionString,
+  collection,
+  filters = null,
+  sortFilters = null
+) {
+  const db = await connect(connectionString);
   const cursor = await db
     .collection(collection)
     .find(filters)
@@ -30,18 +36,18 @@ async function read(collection, filters = null, sortFilters = null) {
   return cursorReader(cursor);
 }
 
-async function update(collection, filters = null, data) {
-  const db = await connect();
-  db.collection(collection).updateMany(filters, data);
+export async function update(connectionString, collection, filters = null, data) {
+  const db = await connect(connectionString);
+  return await db.collection(collection).updateMany(filters, data);
 }
 
-async function remove(collection, filters = null) {
-  const db = await connect();
-  db.collection(collection).deleteOne(filters);
+export async function remove(connectionString, collection, filters = null) {
+  const db = await connect(connectionString);
+  return await db.collection(collection).deleteMany(filters);
 }
 
 const awaiter = async () => {
-  const out = await read("test", null, { number: -1 });
+  const out = await read(connectionString, "test", null, { number: -1 });
   console.log(out);
 };
 

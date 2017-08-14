@@ -1,7 +1,7 @@
 # isotropy-lib-mongo
 Mongo Library for the Isotropy Project
 
-1. read(collection, filters)
+1. read(collection, filters, sortFilters)
   returns collection
 
 2. insert(collection, data)
@@ -13,8 +13,5 @@ Mongo Library for the Isotropy Project
 4. update(collection, data, filters)
   returns nothing
 
-5. sort(collection, order)
-  returns collection
-
-6. count(collection)
+5. count(collection)
   returns integer
