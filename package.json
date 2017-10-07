@@ -13,8 +13,8 @@
     "type": "git",
     "url": "https://github.com/isotropy/isotropy-lib-db.git"
   },
-  "author": "Arivanandan",
-  "license": "ISC",
+  "author": "Isotropy Team<isotropy@agilehead.com>",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/isotropy/isotropy-lib-db/issues"
   },
