@@ -1,7 +1,7 @@
 {
-  "name": "isotropy-lib-db",
+  "name": "isotropy-lib-mongodb",
   "version": "1.0.1",
-  "description": "Postgres Library for the Isotropy Project",
+  "description": "Mongodb Library for the Isotropy Project",
   "main": "index.js",
   "directories": {
     "test": "tests"
