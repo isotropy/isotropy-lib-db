@@ -1,6 +1,6 @@
 {
   "name": "isotropy-lib-db",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Postgres Library for the Isotropy Project",
   "main": "index.js",
   "directories": {
